@@ -1,0 +1,16 @@
+.navigation-panel-list {
+    margin-top: 70px;
+    font: 24px Bebas Neue;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+    color: #292929;
+}
+.navigation-panel-list li a{
+    color: #a7a7a7;
+    margin-left: 40px;
+}
+.navigation-panel-list li a:hover{
+    text-decoration: none;
+	color: #fcb118;
+}

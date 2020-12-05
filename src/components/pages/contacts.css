@@ -1,0 +1,35 @@
+.map {
+    margin: auto;
+}
+
+.contact-info {
+    margin: 10px 10px 0 0;
+}
+
+#office {
+    font-size: 22px;
+}
+
+.office-info {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.office-info p {
+    margin-top: -10px;
+}
+
+.office-info__item {
+    margin-top: 5px;
+}
+
+.office-info__item img {
+    margin-right: 10px;
+}
+
+.offices {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

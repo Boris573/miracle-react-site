@@ -1,0 +1,64 @@
+.form-wrapper{
+    margin-top: 50px;
+	float: right;
+	width: 320px;
+	padding: 10px;
+	background: rgba(0,0,0,.2);
+	border-radius: 10px;
+}
+.form-wrapper input{
+	width: 220px;
+	height: 40px;
+	padding: 10px 5px;
+	float: left;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: Arial, sans-serif;
+	border: 0px;
+	background: #eee;
+	border-radius: 3px 0 0 3px;	
+}
+.form-wrapper input:focus {
+	outline: 0;
+	background: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0.8) inset;
+}
+.form-wrapper button{
+	position: relative;
+	float: right;
+	border: 0px;
+	padding: 0px;
+	cursor: pointer;
+	height: 40px;
+	width: 80px;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: Arial, sans-serif;
+	line-height: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	background: #fcb118;
+	border-radius: 0 3px 3px 0;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3) 
+}
+.form-wrapper button:hover{
+	background: #FCA118;
+}
+.form-wrapper button:before{
+	content: "";
+	position: absolute;
+	border-width: 8px 8px 8px 0;
+	border-style: solid solid solid none;
+	border-color: transparent #fcb118 transparent;
+	top: 12px;
+	left: -6px;
+}
+.form-wrapper button:hover:before{
+	border-right-color: #FCA118 	
+}
+.form-wrapper button:active, .form-wrapper button:focus {
+	background: #FC7F18
+}
+.form-wrapper button:active:before{
+	border-right-color:#FC7F18
+}

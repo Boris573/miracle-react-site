@@ -1,0 +1,14 @@
+.header {
+    padding: 10px;
+    background-color: #292929;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 0 5px;
+}
+.logo-head {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left:0;
+    image-rendering: crisp-edges;
+}

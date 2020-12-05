@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+body {
+    font: 14px Roboto;
+    background: #ececec;
+}
+hr {
+    border: none; /* Убираем границу */
+    background-color: #fcb118; /* Цвет линии */
+    height: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrapper {
+    box-shadow: 0 0 1px #797979;
+    margin-right: 15%;
+    margin-left: 15%;
+    border: 1px solid #ccc; 
+    background-color: #fff;
+    padding: 20px 40px 0px 40px;
+}

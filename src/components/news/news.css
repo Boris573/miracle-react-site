@@ -1,0 +1,18 @@
+.news {
+    column-count: 1;
+    column-gap: 20px;
+}
+
+.news-headline {
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column !important;
+    font: 14px Noto Sans JP;
+    margin-left: 180px;
+}

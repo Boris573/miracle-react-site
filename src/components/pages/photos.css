@@ -1,0 +1,14 @@
+.post-photo {
+    margin: auto !important;
+}
+
+.descr {
+    margin: 20px 0 50px 20px;
+    font-size: 16px;
+    text-align: left;
+    /* border-bottom: 1px solid rgb(235, 235, 235); */
+}
+
+.descr p {
+    margin-top: 5px;
+}
