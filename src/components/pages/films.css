@@ -7,8 +7,8 @@
 }
 
 .film-list {
-    margin-left: -7%;
-    margin-right: -7%;
+    margin-left: -2%;
+    margin-right: -2%;
     margin-top: -10px;
     display: flex;
     flex-wrap: wrap !important;
@@ -16,8 +16,8 @@
 
 .film-list img {
     border-radius: 10px;
-    width: 200px;
-    height: 300px;
+    width: 180px;
+    height: 280px;
     margin: 10px;
 }
 
@@ -31,4 +31,30 @@
 
 #serials {
     margin-top: -30px;
+}
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 560px) {
+    .film-list img {
+        border-radius: 10px;
+        width: 90%;
+        height: 90%;
+        margin: 10px;
+    }
+
+    #films, #serials {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .film-list {
+        margin-top: -40px;
+    }
+
+    .film {
+        margin-bottom: 20px;
+        width: 50%;
+    }
 }

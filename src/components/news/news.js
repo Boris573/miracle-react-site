@@ -9,7 +9,7 @@ import news3 from '../../assets/img/news3.jpg';
 
 const News = () => {
     return (
-        <div>
+        <div className="news-wrapper">
             <NewsItem 
                 newsImg={news1}
                 newsName="Trailer release data is set for August 17"

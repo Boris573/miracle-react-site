@@ -12,11 +12,6 @@ body {
     font: 14px Roboto;
     background: #ececec;
 }
-hr {
-    border: none; /* Убираем границу */
-    background-color: #fcb118; /* Цвет линии */
-    height: 1px;
-}
 
 .hidden {
     display: none;
@@ -29,4 +24,22 @@ hr {
     border: 1px solid #ccc; 
     background-color: #fff;
     padding: 20px 40px 0px 40px;
+}
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 560px) {
+    body {
+        font: 16px Roboto;
+    }
+
+    .wrapper {
+        border: 1px solid #fff; 
+        border-bottom: 1px solid #ccc; 
+        margin-right: 0;
+        margin-left: 0;
+        background-color: #fff;
+        padding: 20px 0px 0px 0px;    }
+
 }

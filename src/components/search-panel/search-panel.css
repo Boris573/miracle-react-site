@@ -1,13 +1,13 @@
 .form-wrapper{
     margin-top: 50px;
 	float: right;
-	width: 320px;
+	width: 300px;
 	padding: 10px;
 	background: rgba(0,0,0,.2);
 	border-radius: 10px;
 }
 .form-wrapper input{
-	width: 220px;
+	width: 200px;
 	height: 40px;
 	padding: 10px 5px;
 	float: left;
@@ -61,4 +61,17 @@
 }
 .form-wrapper button:active:before{
 	border-right-color:#FC7F18
+}
+.search {
+	align-self: center;
+}
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 560px) {
+	.form-wrapper{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }

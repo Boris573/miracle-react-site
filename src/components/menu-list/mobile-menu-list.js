@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { slide as Menu } from "react-burger-menu";
+
 
 import MenuListItem from '../menu-list-item/menu-list-item';
 
@@ -32,9 +34,11 @@ export default class MenuList extends Component {
         })
 
         return (
-            <ul className="desctop navigation-panel-list">
-                {tabsBtn}
-            </ul>
+            <Menu className="mobile" {...this.props}>
+                <ul className="navigation-panel-list">
+                    {tabsBtn}
+                </ul>
+            </Menu>
         )
     }
 }

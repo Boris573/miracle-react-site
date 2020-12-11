@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import News from '../news/news';
 import './pages.css';
+import './main.css';
 
-const MainPage = () => {
-    return (
-        <div className="tab-item">
+import left from '../../assets/icons/left.svg';
+import right from '../../assets/icons/right.svg';
+
+
+export default class MainPage extends Component {
+
+    state = {
+        videoNumber: 0,
+        videos: [
+            'https://www.youtube.com/embed/sj9J2ecsSpo',
+            'https://www.youtube.com/embed/g59rUQbVlIw',
+            'https://www.youtube.com/embed/XW2E2Fnh52w'
+        ]
+    }
+
+    render() {
+
+
+        const {videoNumber, videos} = this.state;
+        const video = <iframe width="700" height="400" title="1" src={videos[videoNumber]} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        return (
+            <div className="tab-item">
                 <div id="news" className="section">
                     <div className="section-name">
                         <h2 className="headline"><b>News</b></h2>
@@ -19,14 +39,48 @@ const MainPage = () => {
                     <div className="section-name">
                         <h2 className="headline"><b>Trailers</b></h2>
                     </div>
+                    <div className="arrows">
+                        <img 
+                            className="left clarity" 
+                            alt="" 
+                            onClick={()=> {
+                                this.setState(() => {
+                                    let newNumber = videoNumber;
+                                    if (newNumber === 0) {
+                                        newNumber = videos.length - 1;
+                                    } else {
+                                        newNumber--;
+                                    }
+                                    return {
+                                        videoNumber: newNumber
+                                    }
+                                });
+                            }}
+                            src={left}/>
+                        <img 
+                            className="right clarity" 
+                            alt="" 
+                            onClick={()=> {
+                                this.setState(() => {
+                                    let newNumber = videoNumber;
+                                    if (newNumber === videos.length - 1) {
+                                        newNumber = 0;
+                                    } else {
+                                        newNumber++;
+                                    }
+
+                                    return {
+                                        videoNumber: newNumber
+                                    }
+                                });
+                            }}
+                            src={right}/>
+                    </div>
                     <div className="section-info center trailers">
-                        <div className="video">
-                            <div className="powr-video-slider" id="1420835f_1607002609"></div>  
-                        </div>
+                        {video}                    
                     </div>
                 </div>
             </div>
-    )
+        )
+    }
 }
-
-export default MainPage;
