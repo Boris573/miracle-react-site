@@ -1,10 +1,10 @@
 import React from 'react';
-import Film from './film';
+import Film from '../film-details/film';
 
-import './pages.css';
+import '../pages.css';
 import './films.css';
 
-import {getAllFilms, getAllSerials} from '../../services/films-info';
+import {getAllFilms, getAllSerials} from '../../../services/films-info';
 
 
 const FilmsPage = () => {

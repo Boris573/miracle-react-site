@@ -7,14 +7,14 @@ import './menu-list.css';
 export default class MenuList extends Component {
 
     state = {
-        idx: 0
+        idx: ''
     }
 
     tabs = [
-        {id: "0", url: "/", text: "Main"},
-        {id: "1", url: "/films", text: "Films"},
-        {id: "2", url: "/photos", text: "Photos"},
-        {id: "3", url: "/contacts", text: "Contacts"}
+        {id: "main", url: "/", text: "Main"},
+        {id: "films", url: "/films", text: "Films"},
+        {id: "photos", url: "/photos", text: "Photos"},
+        {id: "contacts", url: "/contacts", text: "Contacts"}
     ]
 
     onMenuChange = (id) => {
@@ -27,6 +27,7 @@ export default class MenuList extends Component {
                 <MenuListItem 
                     key={item.id} 
                     {...item}
+                    activePage={this.state.idx}
                     onMenuChange={this.onMenuChange}/>
             )
         })

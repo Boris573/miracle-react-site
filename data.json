@@ -1,0 +1,33 @@
+{
+    "news": [
+        {
+            "newsName": "Trailer release data is set for August 17",
+            "newsText": "The creators of the film \"Boris\" announced that trailer for the film should be released on 17 August. 17 August is the birthday of Boris himself."
+        },
+        {
+            "newsName": "Chepicov Boris announced \"Boris 2\"",
+            "newsText": "The president of the Miracle studio, Boris, announced new film with name \"Boris 2\". There is no details about the movie."
+        },
+        {
+            "newsName": "Mads Mikkelsen officially replaces Johnny Depp",
+            "newsText": "Film Studio Warner Bros. has officially confirmed that Mads Mikkelsen will replace Johnny Depp in Fantastic Beasts and Where to Find Them 3. This is reported by The Wrap."
+        }
+    ],
+    "contacts": [
+        {
+            "address": "Minsk, Dzerzhinsky prospect, 95",
+            "telephone": "+375333700026",
+            "email": "chepicovboris@mail.ru"
+        },
+        {
+            "address": "Minsk, Privaksalnaya square, 7",
+            "telephone": "+375336262808",
+            "email": "chepicov.boris@mail.ru"
+        }
+    ],
+    "photos": [
+        "Iron Man drawn by our subscriber.",
+        "Batman from our subscriber.",
+        "Another drawing from our subscriber. Now it is superman."
+    ]
+}

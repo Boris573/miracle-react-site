@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 
 import './menu-list-item.css';
 
-const MenuListItem = ({id, url, text, onMenuChange}) => {
+const MenuListItem = ({id, url, text, onMenuChange, activePage}) => {
 
-    const clazz = window.location.pathname === url ? ' active' : '';
+    const clazz = (window.location.pathname === url || activePage === id) ? ' active' : '';
 
     return (
         <li><Link 

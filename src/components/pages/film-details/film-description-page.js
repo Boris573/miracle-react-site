@@ -1,10 +1,9 @@
 import React from 'react';
-import {getFilm} from '../../services/films-info';
+import {getFilm} from '../../../services/films-info';
 
 import './film-detail.css';
 
 const FilmDescriptionPage = ({itemId}) => {
-
     const filmDescription = getFilm(itemId)[0];
     const {name, photo, year, genre, director, description} = filmDescription;
     return (
