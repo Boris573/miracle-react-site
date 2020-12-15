@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 import { slide as Menu } from "react-burger-menu";
 
 
@@ -6,39 +6,41 @@ import MenuListItem from '../menu-list-item/menu-list-item';
 
 import './menu-list.css';
 
-export default class MenuList extends Component {
 
-    state = {
-        idx: 0
-    }
+const MobileMenuList = () => {
 
-    tabs = [
-        {id: "0", url: "/", text: "Main"},
-        {id: "1", url: "/films", text: "Films"},
-        {id: "2", url: "/photos", text: "Photos"},
-        {id: "3", url: "/contacts", text: "Contacts"}
+    const tabs = [
+        {id: "main", url: "/", text: "Main"},
+        {id: "films", url: "/films", text: "Films"},
+        {id: "photos", url: "/photos", text: "Photos"},
+        {id: "contacts", url: "/contacts", text: "Contacts"}
     ]
 
-    onMenuChange = (id) => {
-        this.setState({idx: id});
+    const [index, setIndex] = useState('');
+
+
+
+    const onMenuChange = (id) => {
+        setIndex(id);
     }
 
-    render() {
-        const tabsBtn = this.tabs.map((item) => {
-            return (
-                <MenuListItem 
-                    key={item.id} 
-                    {...item}
-                    onMenuChange={this.onMenuChange}/>
-            )
-        })
+    const tabsBtn = tabs.map((item) => {
+        return (
+            <MenuListItem 
+                key={item.id} 
+                {...item}
+                activePage={index}
+                onMenuChange={onMenuChange}/>
+        )
+    })
 
         return (
-            <Menu className="mobile" {...this.props}>
+            <Menu className="mobile" >
                 <ul className="navigation-panel-list">
                     {tabsBtn}
                 </ul>
             </Menu>
         )
-    }
 }
+
+export default MobileMenuList;

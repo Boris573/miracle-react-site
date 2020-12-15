@@ -1,41 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import MenuListItem from '../menu-list-item/menu-list-item';
 
 import './menu-list.css';
 
-export default class MenuList extends Component {
+const MenuList = () => {
 
-    state = {
-        idx: ''
-    }
+    const [index, setIndex] = useState('');
 
-    tabs = [
+    const tabs = [
         {id: "main", url: "/", text: "Main"},
         {id: "films", url: "/films", text: "Films"},
         {id: "photos", url: "/photos", text: "Photos"},
         {id: "contacts", url: "/contacts", text: "Contacts"}
     ]
 
-    onMenuChange = (id) => {
-        this.setState({idx: id});
+    const onMenuChange = (id) => {
+        setIndex(id);
     }
 
-    render() {
-        const tabsBtn = this.tabs.map((item) => {
-            return (
-                <MenuListItem 
-                    key={item.id} 
-                    {...item}
-                    activePage={this.state.idx}
-                    onMenuChange={this.onMenuChange}/>
-            )
-        })
-
+    const tabsBtn = tabs.map((item) => {
         return (
-            <ul className="desctop navigation-panel-list">
-                {tabsBtn}
-            </ul>
+            <MenuListItem 
+                key={item.id} 
+                {...item}
+                activePage={index}
+                onMenuChange={onMenuChange}/>
         )
-    }
+    })
+
+    return (
+        <ul className="desctop navigation-panel-list">
+            {tabsBtn}
+        </ul>
+    )
 }
+
+export default MenuList;

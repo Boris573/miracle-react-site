@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Header from '../header/header';
@@ -13,26 +13,26 @@ import './app.css';
 
 
 
-export default class App extends Component {
-    render() {
-        return (
-            <Router>
-                <div id="App">
-                    <Header />
-                    <div className="wrapper" id="page-wrap">
-                        <div className="content">
-                            <Route path="/" exact component={MainPage}/>
-                            <Route path="/films" exact component={FilmsPage}/>
-                            <Route path="/films/:id" 
-                                    render={({match}) => <FilmDescriptionPage itemId={match.params.id} />}/>
-                            <Route path="/photos" component={PhotosPage}/>
-                            <Route path="/contacts" component={ContactsPage}/>
+const App = () => {
+    return (
+        <Router>
+            <div id="App">
+                <Header />
+                <div className="wrapper" id="page-wrap">
+                    <div className="content">
+                        <Route path="/" exact component={MainPage}/>
+                        <Route path="/films" exact component={FilmsPage}/>
+                        <Route path="/films/:id" 
+                                render={({match}) => <FilmDescriptionPage itemId={match.params.id} />}/>
+                        <Route path="/photos" component={PhotosPage}/>
+                        <Route path="/contacts" component={ContactsPage}/>
 
-                        </div>
                     </div>
-                    <Footer />
                 </div>
-            </Router>
-        )
-    }
+                <Footer />
+            </div>
+        </Router>
+    )
 }
+
+export default App
